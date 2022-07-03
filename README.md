@@ -6,7 +6,7 @@
 
 ## In-game e-sports UI design data
 
-### e-sports UI
+### e-sports UI Layout
 
 ![e-sports UI design](/assets/stream_ui.png)
 
@@ -20,7 +20,7 @@ OBS Studio is a free open-source software that allows you to stream your game to
 
 ### League prod toolkit
 
-Toolkit for League Productions with overlays for champion select, ingame events, end of game stats, and more.
+Toolkit for League Productions with overlays for champion select, in-game events, end of game stats, and more.
 
 [Github Page](https://github.com/RCVolus/league-prod-toolkit)
 
@@ -60,7 +60,7 @@ ReplayBook is a free open-source tool that helps you organize and manage your do
 
 [Github Page](https://github.com/fraxiinus/ReplayBook)
 
-### Riot LOL Creator-Safe Playlist
+### Riot LOL Creator-Safe Playlist(optional)
 
 Creator-Safe Playlist from Riot, you can use it for streaming BGM.
 

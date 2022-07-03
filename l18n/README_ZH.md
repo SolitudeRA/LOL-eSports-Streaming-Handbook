@@ -2,7 +2,7 @@
 
 ## In-game观赛UI设计数据
 
-### 观赛UI
+### 观赛UI Layout
 
 ![观赛UI图纸](../assets/stream_ui.png)
 
