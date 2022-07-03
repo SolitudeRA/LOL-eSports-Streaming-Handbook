@@ -4,6 +4,12 @@
 
 [<img src='https://img.shields.io/badge/日本語版-こちら-orange' alt='Github'></img>](/l18n/README_JA.md)
 
+## In-game e-sports UI design data
+
+### e-sports UI
+
+![e-sports UI design](/assets/stream_ui.png)
+
 ## Streaming toolchain
 
 ### OBS
@@ -151,10 +157,6 @@ It's recommended that create several scene for each condition(normal, team fight
 3. Image(Match poster, team logo etc.)
 4. Audio output capture(BGM)
 
-## In-game e-sports UI design data
 
-### e-sports UI
-
-![e-sports UI design](/assets/stream_ui.png)
 
 

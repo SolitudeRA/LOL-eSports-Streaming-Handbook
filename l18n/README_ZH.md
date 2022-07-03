@@ -1,5 +1,11 @@
 # 英雄联盟电竞直播手册（不含国服）
 
+## In-game观赛UI设计数据
+
+### 观赛UI
+
+![观赛UI图纸](../assets/stream_ui.png)
+
 ## 直播工具链
 
 ### OBS
@@ -147,9 +153,3 @@ OBS Studio推流配置流程：
 2. 浏览器源(场间倒计时工具)
 3. 图像源(比赛海报及参赛队伍logo等)
 4. 音频输出源(BGM)
-
-## In-game观赛UI设计数据
-
-### 观赛UI
-
-![观赛UI图纸](../assets/stream_ui.png)
