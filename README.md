@@ -10,6 +10,25 @@
 
 ![e-sports UI design](/assets/stream_ui.png)
 
+### Champion status placeholder
+
+[PNG](assets/champion-status-placeholder.png)
+
+[PSD](assets/champion-status-placeholder.psd)
+
+### Scoreboard placeholder
+
+[PNG](assets/scoreboard-placeholder.png)
+
+[PSD](assets/scoreboard-placeholder.psd)
+
+### Mini-map placeholder
+
+[PNG](assets/minimap-placeholder.png)
+
+[PSD](assets/minimap-placeholder.psd)
+
+
 ## Streaming toolchain
 
 ### OBS
