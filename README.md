@@ -1,4 +1,4 @@
-# League of Legends e-sports streaming handbook<br> 英雄联盟电竞直播手册<br> リーグ・オブ・レジェンド eスポーツ配信手帳
+# League of Legends e-sports streaming handbook<br> 英雄联盟电竞赛事直播手册<br> リーグ・オブ・レジェンド eスポーツ配信手帳
 
 [<img src='https://img.shields.io/badge/中文版-点击这里-brightgreen' alt='CI/CD'></img>](/l18n/README_ZH.md)
 
