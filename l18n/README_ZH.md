@@ -10,19 +10,13 @@
 
 [PNG](../assets/champion-status-placeholder.png)
 
-[PSD](../assets/champion-status-placeholder.psd)
-
 ### Scoreboard placeholder
 
 [PNG](../assets/scoreboard-placeholder.png)
 
-[PSD](../assets/scoreboard-placeholder.psd)
-
 ### Mini-map placeholder
 
 [PNG](../assets/minimap-placeholder.png)
-
-[PSD](../assets/minimap-placeholder.psd)
 
 
 ## 直播工具链
