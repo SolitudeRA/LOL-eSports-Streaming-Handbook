@@ -51,7 +51,7 @@ An addition to the league-prod-toolkit for the observer PC.
 
 ### Creator Suite Replay / League Director
 
-Tools for staging and recording videos from League of Legends replays. You can use them for shooting scenery shot before the match begins or highlights in game. Creator Suite Replay is developed by SkinSpotlights(recommend)，League Director is developed by Riot.
+Tools for staging and recording videos from League of Legends replays. You can use them for shooting scenery shot before the match begins or highlights in game. Creator Suite Replay is developed by SkinSpotlights，League Director is developed by Riot(recommend).
 
 [Creator Suite Replay](https://github.com/SkinSpotlights/CreatorSuite-ReplayAPI/releases)
 

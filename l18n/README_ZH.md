@@ -47,7 +47,7 @@ League prod toolkit的本地OB工具，用于与League prod toolkit的LCU端点�
 
 ### Creator Suite Replay / League Director
 
-英雄联盟客户端比赛回放的镜头工具，可以用于比赛开始的空镜头拍摄以及后续高光的导演镜头拍摄，上述两个软件都开源可用。Creator Suite Replay由SkinSpotlights开发（推荐使用），League Director由英雄联盟官方开发。
+英雄联盟客户端比赛回放的镜头工具，可以用于比赛开始的空镜头拍摄以及后续高光的导演镜头拍摄，上述两个软件都开源可用。Creator Suite Replay由SkinSpotlights开发，League Director由英雄联盟官方开发（推荐使用）。
 
 [Creator Suite Replay](https://github.com/SkinSpotlights/CreatorSuite-ReplayAPI/releases)
 
