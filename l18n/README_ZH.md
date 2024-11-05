@@ -38,19 +38,19 @@
 
 ### 观赛 UI 布局
 
-![观赛 UI 图纸](../assets/stream_ui.png)
+![观赛 UI 图纸](/assets/stream_ui.png)
 
 ### 英雄状态占位
 
-[PNG 下载](../assets/champion-status-placeholder.png)
+[PNG 下载](/assets/champion-status-placeholder.png)
 
 ### 计分板占位
 
-[PNG 下载](../assets/scoreboard-placeholder.png)
+[PNG 下载](/assets/scoreboard-placeholder.png)
 
 ### 小地图占位
 
-[PNG 下载](../assets/minimap-placeholder.png)
+[PNG 下载](/assets/minimap-placeholder.png)
 
 
 ## 直播工具链

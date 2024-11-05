@@ -40,19 +40,19 @@
 
 ### 観戦 UI レイアウト
 
-![観戦 UI 図](../assets/stream_ui.png)
+![観戦 UI 図](/assets/stream_ui.png)
 
 ### チャンピオンステータス プレースホルダー
 
-[PNG ダウンロード](../assets/champion-status-placeholder.png)
+[PNG ダウンロード](/assets/champion-status-placeholder.png)
 
 ### スコアボード プレースホルダー
 
-[PNG ダウンロード](../assets/scoreboard-placeholder.png)
+[PNG ダウンロード](/assets/scoreboard-placeholder.png)
 
 ### ミニマップ プレースホルダー
 
-[PNG ダウンロード](../assets/minimap-placeholder.png)
+[PNG ダウンロード](/assets/minimap-placeholder.png)
 
 
 ## 配信ツールチェーン

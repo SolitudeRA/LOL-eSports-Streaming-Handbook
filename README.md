@@ -44,19 +44,19 @@ If there are enough staff and the network allows, you can use online conferencin
 
 ### Viewer UI Layout
 
-![Viewer UI Layout](../assets/stream_ui.png)
+![Viewer UI Layout](/assets/stream_ui.png)
 
 ### Champion Status Placeholder
 
-[Download PNG](../assets/champion-status-placeholder.png)
+[Download PNG](/assets/champion-status-placeholder.png)
 
 ### Scoreboard Placeholder
 
-[Download PNG](../assets/scoreboard-placeholder.png)
+[Download PNG](/assets/scoreboard-placeholder.png)
 
 ### Minimap Placeholder
 
-[Download PNG](../assets/minimap-placeholder.png)
+[Download PNG](/assets/minimap-placeholder.png)
 
 
 ## Streaming Toolkit
