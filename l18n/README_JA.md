@@ -1,165 +1,205 @@
-# リーグ・オブ・レジェンド eスポーツ配信手帳
+# リーグ・オブ・レジェンド eスポーツ配信ガイドライン
 
-## In-game e-スポーツUIデザインデータ
+## 前書き
 
-### eスポーツUI Layout
+先日、Discordサーバーにてリーグ・オブ・レジェンドの大会配信を担当しました。試合前の準備から試合中の配信内容の管理、試合後のまとめまで、全ての工程を一人で行い、視聴者にスムーズなライブ観戦体験を提供することができました。
 
-![观赛UI图纸](../assets/stream_ui.png)
+この経験をもとに、今後の配信作業に役立つように、配信作業の参考となるガイドを作成しました。このガイドには、配信における重要なポイント、操作手順、および便利なツールをまとめています。リーグ・オブ・レジェンドの大会配信に興味のある方にとって、参考になれば幸いです。
 
-### Champion status placeholder
+## 配信ディレクションの思考プロセス
 
-[PNG](../assets/champion-status-placeholder.png)
+配信の過程で、ディレクター（配信担当者）の主要な任務は、視聴者が試合の重要な瞬間をリアルタイムでクリアに観戦できるようにすることです。さらに、視聴者が試合の様々なデータ情報を適切な範囲で視認できるようにしつつ、配信の流れとプロフェッショナリズムを保つことが求められます。以下に、各ステージごとの配信ディレクションの思考プロセスと操作のポイントを示します。
 
-### Scoreboard placeholder
+1. **試合前準備**
+   - **シーン設定**：試合の異なる段階で迅速に切り替えられるよう、OBSにて異なるシーン（ウォームアップ、Banpick、In-game、After-game など）を事前に設定します。必要な音声、ビデオ、画像、テキストなどの要素を各シーンに追加し、カラータグを使って区別することで、各シーンが配信ニーズに合致していることを確認します。また、コンテンツの変更やトラブルシューティングへの迅速な対応が可能になります。
+   - **音声調整**：VB-Cable を使用して複数の音声出力チャンネルを管理し、解説音声、ゲーム音、BGM を分けて調整できるようにします。これにより、異なるシーンでの切り替えが容易になります。特に Banpick や In-game のフェーズでは、サウンドや BGM の音量を適切に管理し、視聴者にとって快適な体験を提供します。
+   - **画面レイアウト**：配信の UI を整理し、スコアボードやチャンピオンの状態、試合情報などの重要な要素を視認性よく配置します。
 
-[PNG](../assets/scoreboard-placeholder.png)
+2. **試合開始（Banpick フェーズ）**
+   - **BP 画面の切り替え**：Banpick フェーズでは、League Observer Tool の Banpick コンポーネントや Web ベースの Banpick ツールを使用し、BP 画面を視聴者に表示します。音声管理を通じて BGM を流し、リラックスした雰囲気を維持します。
+   - **解説との連携**：このフェーズでは通常、解説者が各チームの編成について分析を行います。音声ソースを解説音声に切り替え、BP 情報の明瞭な表示を保ちます。
 
-### Mini-map placeholder
+3. **試合中（In-game フェーズ）**
+   - **重要な場面の捕捉**：標準 OB、チームファイト視点、ハイライトリプレイなど、異なる状況に対応できるよう複数の In-game シーンを設定します。League Observer Tool の In-game コンポーネントを使用して試合中の重要なイベント（例：チームファイト、タワー下でのキルなど）をリアルタイムで捕捉し、適切なシーンに即座に切り替えます。
+   - **多視点切り替え**：ディレクターは試合の進行に注意を払い、必要に応じて迅速にカメラを切り替え、試合中のハイライトを視聴者に届けます。Stream Deck などのデバイスを活用することでシーンの切り替えがスムーズに行えます。
+   - **音声同期**：ゲーム音と解説音声の同期を確保し、BGM の音量を調整して解説を妨げないようにします。OBS の音声ミキサーを通じて音量を管理し、臨場感を維持します。
 
-[PNG](../assets/minimap-placeholder.png)
+4. **試合終了（After-game フェーズ）**
+   - **試合後の画面表示**：試合終了後は After-game シーンに切り替え、試合結果、選手データ、試合後のパネルを表示します。League Observer Tool の試合後コンポーネントを使用して試合データを直感的に表示します。
+   - **解説による分析**：このフェーズでは通常、解説者が試合の振り返りを行います。解説音声をクリアに確保しつつ、リラックスした BGM を適切に流します。
+
+5. **試合間の休憩（Interlude）**
+   - **情報の表示**：試合間の休憩中に、スコア、次の試合の開始時間、参加チームなどの情報を表示します。カウントダウンツールをブラウザソースとして追加し、視聴者が次の試合の時間を把握できるようにします。
+   - **リラックスした雰囲気作り**：Riot 公式の Creator-Safe プレイリストなどの適切な BGM を流し、視聴者の観戦体験を維持します。
+
+### マルチビューおよびハイライトリプレイについて
+
+十分な配信スタッフがいる場合やネットワーク条件が整っている場合、オンライン会議ツールや音声サービスを利用してマルチビュー OB を行い、公式の OB ツールでカメラワーク付きのハイライトリプレイを作成することが可能です。または、複数のローカルデバイスをキャプチャカードで連携させてマルチビュー OB 表示を行うことも可能です。
+
+## In-game 観戦 UI 設計データ
+
+### 観戦 UI レイアウト
+
+![観戦 UI 図](../assets/stream_ui.png)
+
+### チャンピオンステータス プレースホルダー
+
+[PNG ダウンロード](../assets/champion-status-placeholder.png)
+
+### スコアボード プレースホルダー
+
+[PNG ダウンロード](../assets/scoreboard-placeholder.png)
+
+### ミニマップ プレースホルダー
+
+[PNG ダウンロード](../assets/minimap-placeholder.png)
 
 
 ## 配信ツールチェーン
 
-### OBS
+### OBS Studio
 
-OBS Studioはビデオ録画と生放送用の無料でオープンソースのソフトウェアである。
+OBS Studio は、オープンソースの配信ツールで、迅速に配信を開始し、配信コンテンツを推送することが可能です。
 
-[Download](https://obsproject.com/)
+[ダウンロード](https://obsproject.com/)
 
-### League prod toolkit
+### League Prod Toolkit
 
-League prod toolkitはLOLeスポーツ配信用のオープンソースオーバーレイツールである、試合前BP、試合中のイベント、試合終了時のデータなどを提供できる。
+リーグ・オブ・レジェンド eスポーツの OBS 用ツールキットで、試合前 BP（Ban & Pick）、試合内イベント、試合後パネルなどの機能を提供します。
 
-[Github Page](https://github.com/RCVolus/league-prod-toolkit)
+[GitHub ページ](https://github.com/RCVolus/league-prod-toolkit)
 
-### League observer tool
+### League Observer Tool
 
-League prod toolkitの副属ツールであり、LCU Endpointを通じでLeague prod toolkitと連携し、試合中のイベントを取得できる。
+League Prod Toolkit のローカル OB ツールで、League Prod Toolkit の LCU エンドポイントと通信し、試合内のイベントを監視します。
 
-[Github Page](https://github.com/RCVolus/league-observer-tool)
+[GitHub ページ](https://github.com/RCVolus/league-observer-tool)
 
 ### Creator Suite Replay / League Director
 
-LOL試合リプレイでカメラを自由的移動できるツールである、
+リーグ・オブ・レジェンドの試合リプレイ用カメラツールで、試合前のスケネリーショット撮影や試合後のハイライトキャプチャに使用されます。Creator Suite Replay は SkinSpotlights が開発し、League Director は Riot により公式に開発されています（推奨）。
 
-[Creator Suite Replay](https://github.com/SkinSpotlights/CreatorSuite-ReplayAPI/releases)
+[Creator Suite Replay ダウンロード](https://github.com/SkinSpotlights/CreatorSuite-ReplayAPI/releases)
 
-[League Director](https://github.com/RiotGames/leaguedirector)
+[League Director ダウンロード](https://github.com/RiotGames/leaguedirector)
 
-### Web Banpick tool
-
-ウェブサイトでBanpickできるツールである。
+### Web ベースの Banpick ツール
 
 [PentaQ Web BP Tool](https://data.pentaq.com/bp)
 
-### Photoshop(選択)
+### Photoshop（オプション）
 
-画像編集ツールである、トーナメントポースタなどの加工・色の調整をしたり、デザインを作ったり、こだわりの画像を作ることができる。
+Adobe Photoshop は画像編集ソフトで、配信素材の迅速な作成に役立ちます。
 
-[Download](https://www.adobe.com/cn/products/photoshop.html)
+[ダウンロード](https://www.adobe.com/cn/products/photos
 
-### VB-Cable(選択)
+hop.html)
 
-VB-Cableは、複数のオーディオラインを同時に操作するための仮想オーディオデバイスである。
+### VB-Cable（オプション）
 
-[Download](https://vb-audio.com/Cable/)
+VB-Cable は仮想オーディオデバイスソフトウェアで、配信中の多チャンネル音声入力出力管理に利用できます。
 
-### ReplayBook(選択)
+[ダウンロード](https://vb-audio.com/Cable/)
 
-ReplayBookは、試合終了後のリプレイを管理するためのオープンソースのツールである。
+### ReplayBook（オプション）
 
-[Github Page](https://github.com/fraxiinus/ReplayBook)
+ReplayBook はオープンソースツールで、リーグ・オブ・レジェンドの試合リプレイ（.rofl ファイル）を閲覧し、試合後のハイライト作成に適しています。
 
-### Riot LOL Creator-Safe Playlist(選択)
+[GitHub ページ](https://github.com/fraxiinus/ReplayBook)
 
-Riot公式サイトで提供されている、Creator-Safe　BGMプレイリストである。
+### Riot LOL Creator-Safe プレイリスト
 
-[Spotify Creator-Safe Playlist](https://open.spotify.com/playlist/5hDYD44imzFZEqTfAoco1N?si=Ik6B1FizS4ewpPlwAxawtQ)
+Riot 提供のクリエイター安全音楽プレイリストで、配信中の BGM として利用できます。
 
-[SoundCloud Creator-Safe Playlist](https://soundcloud.com/leagueoflegends/sets/riot-games-creator-safe)
+[Spotify Creator-Safe プレイリスト](https://open.spotify.com/playlist/5hDYD44imzFZEqTfAoco1N?si=Ik6B1FizS4ewpPlwAxawtQ)
 
-### League of Legends Data Dragon(選択)
+[SoundCloud Creator-Safe プレイリスト](https://soundcloud.com/leagueoflegends/sets/riot-games-creator-safe)
 
-League of Legends Data Dragonは、League of Legendsのゲーム自体の画像などのアセットを提供しているウェブサイトである。
+### League of Legends Data Dragon（オプション）
+
+リーグ・オブ・レジェンド公式のデータパックで、チャンピオンデータ、アイテムデータ、イラストなどの資料が含まれています。
 
 [LOL Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon)
 
-### Stream Deck(選択)
+### Stream Deck（オプション）
 
-Stream Deckは、配信者向けのカスタム可能なLCDキーを搭載したライブコンテンツ作成コントローラである。
+配信のためのプログラム可能なショートカットデバイスで、シーンの迅速な切り替えや OB 視点の変更をサポートします。
 
-## OBS設定
+
+## OBS の設定
+
+[Meta Business ヘルプセンター](https://zh-cn.facebook.com/business/help/1968707740106188?id=648321075955172) 参考
 
 ### 配信設定
 
-[Metaビジネスヘルプセンター](https://ja-jp.facebook.com/business/help/1968707740106188?id=648321075955172)を参照した。
+コンテンツの安全性を確保し、ゲーム内 OB ツールの要件を満たすため、1080p@60fps の配信形式が推奨されます。
 
-1. OBSで<b>[設定]</b>をクリックします。
-2. <b>[出力]</b>をクリックします。
-3. [出力モード]のドロップダウンで<b>[詳細]</b>を選択します。
-4. [エンコーダー]のドロップダウンで**H264の動画エンコーダー**を選択します。
-5. [アップロード速度](http://www.speedtest.net/)を測定します。
-6. アップロード速度から20%を差し引いた数値を<b>[ビットレート]</b>に入力します。推奨ビットレートは7500〜8500 Kbps(7.5〜8.5 Mbps)です。
-7. **キーフレーム間隔**が2に設定されていることを確認します。
-8. <b>[設定]</b>をクリックします。
-9. <b>[動画]</b>をクリックします。
-10. 希望の解像度を設定します。対応している解像度は、1秒当たり60フレームで最大1080ピクセル(1920 x 1080)です。
+OBS Studio の配信設定：
 
-### シーンとコンテンツの設定
+1. OBS の **Settings**（設定）をクリックします。
+2. **Output**（出力）に移動します。
+3. **Output Mode**（出力モード）のドロップダウンメニューから **Advanced**（高度）を選択します。
+4. **Encoder**（エンコーダ）のドロップダウンメニューから **H264 ビデオエンコーダ**を選択します。
+5. アップロード速度をテストします（例：[Speedtest](http://www.speedtest.net/) を使用）。
+6. アップロード速度の 80% を **Bitrate**（ビットレート）として使用します。推奨ビットレートは 7500-8500 Kbps（7.5〜8.5 Mbps）です。
+7. **Keyframe Interval**（キーフレーム間隔）を 2 に設定します。
+8. **Settings**（設定）に戻ります。
+9. **Video**（ビデオ）に移動します。
+10. 解像度を 1080p（1920 x 1080）に、フレームレートを 60 に設定します。
 
-ライブ配信の手順を標準化して、Banpick、試合中、試合終了時のシーンを分けて設定するとは極めて推奨する。
+### シーンとコンテンツ設定
 
-シーンを作成する。
+配信プロセスの標準化を推奨し、各配信フェーズ（BP、試合中、試合後など）ごとに別々のシーンを作成してコンテンツの管理を容易にします。
 
-1. OBSの<b>[シーン]</b>ボックスで右クリックします。
-2. <b>[追加]</b>を選択します。
+#### シーンの作成
+
+1. OBS で **Scenes** ボックスを右クリックします。
+2. **Add**（追加）を選択します。
 3. シーンに名前を付けます。
-4. <b>[OK]</b>をクリックします。
-5. 複数のシーンを作成し、ストリーミング中にシーンを切り替えることができます。
+4. **OK**（確定）をクリックします。
+5. 複数のシーンを作成し、配信中に自由に切り替えられます。
 
-### 各シーンのソースを設定する
+### 各シーンにコンテンツソースを設定
 
-**VB-Cable**使用して、配信のオーディオを分けてコントロールするのは極めて推奨する。
+**VB-Cable** を使用して多チャンネル音声出力を実現し、BGM、ゲーム音声、解説音声などの音声ソースを分離します。OBS Studio の **カラータグ**機能を使ってコンテンツソースを区別し、コンテンツ管理と突発事象への対応を容易にします。
 
-OBSの**カラー**機能を使用して、配信中の各ソースを見やすく設定するのは極めて推奨する。
+#### ウォームアップ
 
-#### Warm up
-
-1. 画像(試合ポスター, チームロゴ など)
-2. テキスト(試合タイトル，チーム名 など)
-3. 音声出力キャプチャ(BGM)
-4. 音声入力キャプチャ(ゲスト)
+1. 画像ソース（試合ポスター、チームロゴなど）
+2. テキストソース（試合名、チーム名など）
+3. 音声出力ソース（BGM）
+4. 音声入力ソース（解説）
 
 #### Banpick
 
-1. ブラウザ(League observer banpick tool 又は web banpick tools)
-2. 画像(試合ポスター, チームロゴ など)
-3. テキスト(試合タイトル，チーム名 など)
-4. 音声出力キャプチャ(ゲームサウンド)
-5. 音声出力キャプチャ(BGM)
-6. 音声入力キャプチャ(ゲスト)
+1. ブラウザソース（League Observer Tool の BP コンポーネントまたは Web ベースの BP ツール）
+2. 画像ソース（試合ポスター、チームロゴなど）
+3. テキストソース（試合名、チーム名など）
+4. 音声出力ソース（ゲーム音声、BGM）
+5. 音声入力ソース（解説）
 
-#### 試合中
+#### In-game
 
-試合中の各状況（普通、集団戦、ハイライトなど）に対して、シーンを設定するのは推奨する。
+異なる試合状況（通常、チームファイト、ハイライトリプレイなど）に対応するため、複数のシーンを作成します。
 
-1. ブラウザ(League observer In-game tool)
-2. 画像(UI Layout)
-3. 音声出力キャプチャゲームサウンド)
-4. 音声入力キャプチャ(ゲスト)
+1. ブラウザソース（League Observer Tool の In-game コンポーネント）
+2. 画像ソース（観戦インターフェイスのオーバーレイ）
+3. 音声出力ソース（ゲーム音声）
+4. 音声入力ソース（解説）
 
-#### 試合終了
+#### After-game
 
-1. ブラウザ(League observer after match tool)
-2. テキスト(試合タイトル，チーム名 など)
-3. 画像(試合ポスター, チームロゴ など)
-4. 音声出力キャプチャ(BGM)
-5. 音声入力キャプチャ(ゲスト)
+1. ブラウザソース（League Observer Tool の試合後コンポーネント）
+2. テキストソース（試合名、チーム名など）
+3. 画像ソース（試合ポスター、チームロゴなど）
+4. 音声出力ソース（BGM）
+5. 音声入力ソース（解説）
 
-#### 幕間
+#### Interlude（試合間）
 
-1. テキスト(試合タイトル，チーム名、チームスコア など)
-2. ブラウザ(幕間カウントダウンツール)
-3. 画像(試合ポスター, チームロゴ など)
-4. 音声出力キャプチャ(BGM)
+1. テキストソース（試合名、チーム名、スコアなど）
+2. ブラウザソース（休憩カウントダウンツール）
+3. 画像ソース（試合ポスター、チームロゴなど）
+4. 音声出力ソース（BGM）
+
+この設定により、各試合ステージでコンテンツの管理がスムーズに行えます。
