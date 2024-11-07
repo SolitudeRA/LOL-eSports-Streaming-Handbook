@@ -1,4 +1,4 @@
-# 英雄联盟电竞赛事直播指南<br>League of Legends e-sports Streaming Guideline<br> リーグ・オブ・レジェンド eスポーツ配信ガイドライン
+# 英雄联盟电竞赛事直播指南<br>League of Legends e-sports Broadcasting Guideline<br> リーグ・オブ・レジェンド eスポーツ配信ガイドライン
 
 [<img src='https://img.shields.io/badge/中文版-点击这里-brightgreen' alt='CI/CD'></img>](/l18n/README_ZH.md)
 
